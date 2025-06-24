@@ -63,20 +63,10 @@ Este é um projeto de **API de Gerenciamento de Tarefas**, criado com o objetivo
 
 ---
 
-## 📦 Como executar
+## 📸 Exemplos de Testes
 
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/Projeto1-Api-Aprofunda.git
+### ✅ Teste com Thunder Client - PUT Update Task
+  ![PUT Task](test-images/put.task.jpg)
 
-2. Acesse a pasta API:
-    ```bash
-    cd Projeto1-Api-Aprofunda/API
-
-3. Instale as dependências: 
-   ```bash
-   npm install
-
-4. Inicie o servidor:
-    ```bash
-   node server.js
+### ✅ Teste com Thunder Client - DELETE Task
+  ![DELETE Task](test-images/delete.task.jpg)

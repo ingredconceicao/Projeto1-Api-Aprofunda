@@ -45,7 +45,7 @@ blogRouter.get("/text", (req, res) => {
 });
 
 //atualizar/editar um texto
-blogRouter.patch("text/:id", (req, res) => {
+blogRouter.patch("/text/:id", (req, res) => {
   const { id } = req.params;
   const { title, content, status, author } = req.body;
 
@@ -70,15 +70,23 @@ blogRouter.patch("text/:id", (req, res) => {
   res.json({ message: `Texto com o ${id} editado com sucesso` });
 });
 
+
 //deletar um texto específico
 
-blogRouter.delete("text/:id", (req, res) => {
+//blogRouter.delete("/text/:id", (req, res) => {
+  //const { id } = req.params;
+
+  //const listUpdated = textList.filter((text) => text.id === id);
+
+  //res.json(listUpdated);
+//});
+
+blogRouter.delete("/text/:id", (req, res) => {
   const { id } = req.params;
-
-  const listUpdated = textList.filter((text) => text.id === id);
-
-  res.json(listUpdated);
+  textList.splice(textList.findIndex(t => t.id === id), 1);
+  res.json({ message: `Texto com id ${id} deletado.` });
 });
+
 
 //
 app.use(blogRouter);
